@@ -1,0 +1,29 @@
+git相关
+1、创建仓库目录
+2、git init   将当前目录设置为git管理的仓库
+3、git add XXX  添加文件至仓库
+4、git commit   将文件提交至仓库
+5、git commit -m "XXXX"  添加本次提交注释
+6、git log 查看日志
+7、git log --pretty=oneline   只看最新日志
+8、git reset --hard HEAD^     回滚上一个版本   ^^上两个版本
+9、git reset --hard XXXXX     回滚到某个版本号   XXXX是某一个版本号
+10、git reflog    记录每次命令
+11、git checkout -- XXX  让XXX文件回到最近一次的git commit或者 git add
+		--很重要，没有--，就变成了“切换到另一个分支”的命令
+12、git rm XXX   删除XXX文件
+		然后 git commit -m “” 提交后彻底删除
+github
+账号 liujian1992git
+密码 liujian@1992
+创建创建SSH Key
+ssh-keygen -t rsa -C "m13685426315@163.com"
+
+git remote add origin git@github.com:liujian1992git/learngit.git
+将本地库推到GitHUb库
+
+git push -u origin master
+将本地库推送至远程库上
+
+git push origin master
+只要本地提交，就可以通过该命令将最新的master最新分支推送至GitHub
