@@ -36,3 +36,4 @@ git branch -d dev      ---将dev分支删除
 git switch -c dev      ---创建并切换dev分支
 git switch master      ---切换为主分支
 git log --graph 查看分支合并图
+git merge --no-ff -m "merge with no-ff" dev 合并dev分支 加了merge with no-ff注释  --no-ff参数，表示禁用Fast forward
