@@ -41,7 +41,23 @@ git stash              ---将现场隐藏用来修复bug
 git cherry-pick <commit>   ---把bug提交的修改“复制”到当前分支
 git branch -D <name>   ---强行删除未合并的分支
 git remote -v          ---查看远程库信息
+
 本地新建的分支如果不推送到远程，对其他人就是不可见的
 从本地推送分支，使用git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交
 在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致
 建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name
+从远程抓取分支，使用git pull，如果有冲突，要先处理冲突
+
+git tag <name>  打一个标签
+git tag         查看所有标签
+git log --pretty=oneline --abbrev-commit
+git tag <tagname>用于新建一个标签，默认为HEAD，也可以指定一个commit id
+git tag -a <tagname> -m "blablabla..."可以指定标签信息
+git tag可以查看所有标签
+
+git push origin <tagname>   ---推送本地标签
+git push origin --tags      ---推送全部未推送过的本地标签
+git tag  -d <tagname>       ---删除一个本地标签
+git push origin :refs/tags/<tagname>    ---删除远程标签
+
+git clone git@github.com:liujian1992git/bootstrap.git
