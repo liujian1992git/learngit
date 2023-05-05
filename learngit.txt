@@ -37,3 +37,11 @@ git switch -c dev      ---创建并切换dev分支
 git switch master      ---切换为主分支
 git log --graph 查看分支合并图
 git merge --no-ff -m "merge with no-ff" dev 合并dev分支 加了merge with no-ff注释  --no-ff参数，表示禁用Fast forward
+git stash              ---将现场隐藏用来修复bug
+git cherry-pick <commit>   ---把bug提交的修改“复制”到当前分支
+git branch -D <name>   ---强行删除未合并的分支
+git remote -v          ---查看远程库信息
+本地新建的分支如果不推送到远程，对其他人就是不可见的
+从本地推送分支，使用git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交
+在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致
+建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name
