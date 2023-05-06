@@ -20,8 +20,8 @@ github
 ssh-keygen -t rsa -C "m13685426315@163.com"
 
 git remote add origin git@github.com:liujian1992git/learngit.git
-将本地库推到GitHUb库
-
+将本地库推到GitHUb库  origin代表远程库可更改为其他名
+origin代表远程库可更改为其他名
 git push -u origin master
 将本地库推送至远程库上
 
