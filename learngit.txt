@@ -20,7 +20,7 @@ github
 ssh-keygen -t rsa -C "m13685426315@163.com"
 
 git remote add origin git@github.com:liujian1992git/learngit.git
-将本地库推到GitHUb库  origin代表远程库可更改为其他名
+将本地库推到GitHUb库  
 origin代表远程库可更改为其他名
 git push -u origin master
 将本地库推送至远程库上
@@ -61,3 +61,11 @@ git tag  -d <tagname>       ---删除一个本地标签
 git push origin :refs/tags/<tagname>    ---删除远程标签
 
 git clone git@github.com:liujian1992git/bootstrap.git
+
+忽略某些文件时，需要编写.gitignore
+.gitignore文件本身要放到版本库里，并且可以对.gitignore做版本管理
+
+git config --global alias.st status
+git st 就代表之前的 git status了
+
+Sourcetree的应用
